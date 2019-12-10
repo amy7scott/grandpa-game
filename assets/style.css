@@ -1,0 +1,52 @@
+* {
+    color: #444;
+    background-color: white;
+}
+
+h1, h3 {
+    font-size: 35px;
+    font-family: "Times New Roman";
+    text-align: center;
+    margin: 10px 0;
+    background-color: #444;
+    color: white;
+    padding-top: 5px;
+    padding-bottom 5px;
+    
+}
+
+h3 {
+    font-family: 'Dancing Script', cursive;
+}
+
+#outcome-message {
+    font-size: 27px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    padding: 10px;
+    color: #444;
+    font-weight: bold;
+}
+
+#gameboard {
+    border: black 10px;
+    font-family: Arial;
+    font-size: 25px;
+    float: left;
+    
+}
+
+#photo {
+    float: right;
+    
+
+}
+
+#word-blanks {
+    font-weight: bold;
+}
+
+#directions {
+    color: teal;
+    font-weight: bold;
+}

@@ -1,4 +1,4 @@
-var namesList = ["Booth", "Atyeo", "Warner", "Swan", "Morgan"];
+var namesList = ["BOOTH", "ATYEO", "WARNER", "SWAN", "MORGAN", "COOMBS", "MESCALL", "POWELL", "SCHRUM", "WEST", "SCOTT"];
 
 var computerChosenName = "";
 
@@ -19,7 +19,7 @@ function startGame() {
     numBlanks = letterInComputerChosenName.length;
     blanksAndCorrectLetters = [];
     wrongGuesses = [];
-
+    
 for (var i = 0; i < numBlanks; i++) {
     blanksAndCorrectLetters.push("_");
 }
@@ -60,7 +60,7 @@ function roundComplete() {
 
 if(letterInComputerChosenName.toString() === blanksAndCorrectLetters.toString()) {
     wins++;
-    alert("You win!");
+    document.getElementById("outcome-message").innerHTML = "Well done! The name is " + computerChosenName + "! Press another letter to play again.";
 
     document.getElementById("win-counter").innerHTML = wins;
     startGame();
@@ -68,7 +68,7 @@ if(letterInComputerChosenName.toString() === blanksAndCorrectLetters.toString())
 
 else if (numGuesses === 0) {
     losses++;
-    alert("You lose!");
+    document.getElementById("outcome-message").innerHTML = "You almost got it! The name is " + computerChosenName + "! Press another letter to play again.";
 
     document.getElementById("loss-counter").innerHTML = losses;
     startGame();
@@ -79,7 +79,7 @@ startGame();
 
 document.onkeyup = function(event) {
     if(event.keyCode >= 65 && event.keyCode <=90) {
-var letterGuessed = event.key.toLowerCase();
+var letterGuessed = event.key.toUpperCase();
 checkLetters(letterGuessed);
 roundComplete();
     
